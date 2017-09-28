@@ -20,8 +20,8 @@ dependencies = {
 build = {
   type = "builtin",
   modules = {
-    ["kong.plugins.key-auth.handler"] = "src/handler.lua",
-    ["kong.plugins.key-auth.schema"] = "src/schema.lua",
-    ["kong.plugins.key-auth.api"] = "src/api.lua"
+    ["kong.plugins.kong-plugin-key-auth.handler"] = "src/handler.lua",
+    ["kong.plugins.kong-plugin-key-auth.schema"] = "src/schema.lua",
+    ["kong.plugins.kong-plugin-key-auth.api"] = "src/api.lua"
   }
 }

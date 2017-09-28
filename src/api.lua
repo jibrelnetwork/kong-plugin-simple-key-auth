@@ -1,17 +1,18 @@
 local utils = require "kong.tools.utils"
+local responses = require "kong.tools.responses"
 
 return {
   ["/simple-key-auth/"] = {
-    GET = function(self, helpers)
-      return helpers.responces.send_HTTP_OK(utils.random_string())
+    GET = function(self)
+      return responses.send_HTTP_OK({key = utils.random_string()})
     end,
 
-    PUT = function(self, helpers)
-      return helpers.responces.send_HTTP_NOT_FOUND()
+    PUT = function(self)
+      return responses.send_HTTP_NOT_FOUND()
     end,
 
-    POST = function(self, helpers)
-      return helpers.responces.send_HTTP_NOT_FOUND()
+    POST = function(self)
+      return responses.send_HTTP_NOT_FOUND()
     end
   }
 }
